@@ -1,0 +1,23 @@
+Problem 1: Vowel or Consonant
+letter = input('Enter a letter:')
+if letter =='a':
+        print('The entered character is a vowel.')
+elif letter =='e':
+        print('The entered character is a vowel.')
+elif letter =='i':
+        print('The entered character is a vowel.')
+elif letter =='o':
+        print('The entered character is a vowel.')
+elif letter =='u':
+        print('The entered character is a vowel.')
+elif letter =='A':
+        print('The entered character is a vowel.')
+elif letter =='E':
+        print('The entered character is a vowel.')
+elif letter =='I':
+        print('The entered character is a vowel.')
+elif letter =='O':
+        print('The entered character is a vowel.')
+elif letter =='U':
+        print('The entered character is a vowel.')
+else: print('The entered character is a consonant.')
