@@ -1,0 +1,8 @@
+from math import *
+def squaresum(n):
+    s = 0
+    while n!=0:
+        square = n**2
+        s = s + square
+        n -= 1
+    print('The sum of the squares is', s)
