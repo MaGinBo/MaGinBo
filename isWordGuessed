@@ -1,0 +1,14 @@
+Created on Sat Nov 16 18:18:29 2019
+
+@author: HP
+"""
+import random
+wordlist = ['apple','banana','cherry','orange','gouste','fight','win']
+secretWord = random.choice(wordlist)
+def isWordGuessed(secretWord, lettersGuessed):
+    for letter in secretWord:
+        if letter in lettersGuessed:
+            continue
+        else: return False
+        
+    return True
