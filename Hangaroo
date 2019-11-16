@@ -1,0 +1,37 @@
+@author: HP
+"""
+import random
+wordlist = ['apple','banana','cherry','orange','gouste','fight','win']  
+def Hangaroo(secretWord):
+    mistakesMade = 5
+    lettersGuessed = []
+    
+    
+    name = input('Enter your name, human!: ')
+    print('Hello, ' + name, 'Welcome to Hangaroo!')
+    print('You are only given 5 guesses. Once you use all 5, you are out!!!')
+    
+    while mistakesMade > 0:
+        if isWordGuessed(secretWord, lettersGuessed):
+            return print('You Won! Such wow')
+        print('You have ' + str(mistakesMade) + ' guesses left.')
+        print('Letters that may still be guessed: ' + getAvailableLetters(lettersGuessed))
+        
+        guess = input('Please guess a letter" ')
+        guess = str(guess)
+        guess = guess.lower()
+        
+        if guess not in lettersGuessed:
+            lettersGuessed.append(guess)
+            
+            if guess in secretWord:
+                print('Good one! ' + getGuessedWord(secretWord, lettersGuessed))
+            else:
+                print('Oops! You guessed the wrong letter. ' + getGuessedWord(secretWord, lettersGuessed))
+                mistakesMade -= 1
+        else:
+            print('Oops! You have already guessed that. Try again! '+getGuessedWord(secretWord, lettersGuessed))
+            
+    return print('You ran out of guesses! You just lost the game! By the way, the word was ' + str(secretWord))
+
+Hangaroo(random.choice(wordlist))
