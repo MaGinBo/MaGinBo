@@ -1,0 +1,14 @@
+Created on Sat Nov 16 21:43:23 2019
+
+@author: HP
+"""
+import string
+def getAvailableLetters(lettersGuessed):
+    lowercaseLetters = string.ascii_lowercase
+    alphabetRemaining = ''
+    for letter in lowercaseLetters:
+        if letter not in lettersGuessed:
+            alphabetRemaining = alphabetRemaining + letter
+    return alphabetRemaining
+    
+
