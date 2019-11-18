@@ -1,0 +1,7 @@
+import numpy as np
+
+S = np.array([(np.linspace(1,100,100))], dtype=int)
+S = S.reshape(10,10)
+S = S**2
+
+div_by_3 = S[S%3 == 0]
