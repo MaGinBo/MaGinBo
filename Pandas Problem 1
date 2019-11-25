@@ -1,0 +1,6 @@
+import pandas as pd
+
+df = pd.read_csv(r'C:\Users\HP\Desktop\cars.csv')
+a = df.head()
+b = df.tail()
+print('The first and last five rows of the resulting cars: \n' ,a,b)
